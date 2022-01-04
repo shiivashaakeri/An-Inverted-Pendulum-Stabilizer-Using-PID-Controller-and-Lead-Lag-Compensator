@@ -1,7 +1,7 @@
 # An-Inverted-Pendulum-Stabilizer-Using-PID-Controller-and-Lead-Lag-Compensator
 The inverted pendulum has a unique trait; it is unpredictable, non-linear, and consists of multiple variables. Balancing by PID controller is a continuous process where it corrects the feedback system error from the difference between the measured value and the desired value. Balancing by Lead-Lag compensator is designing a lead compensator for the process to change the shape of the root locus and choose the gain so that the poles are in the desired position and designing a lag compensator to leave the dominant closed-loop poles of the lead-compensated process in approximately the position but provide extra low-frequency gain.
 
-![](Aspose.Words.a923060b-a05e-42fc-8d72-5b51313a9b74.001.png)
+![](./Figures/Aspose.Words.a923060b-a05e-42fc-8d72-5b51313a9b74.001.png)
 
 **The Inverted Pendulum System**
 
@@ -13,7 +13,7 @@ Dr. Aras Adhami
 
 July 2021
 
-29
+
 
 1. **Introduction**
 
