@@ -1,26 +1,38 @@
-# An-Inverted-Pendulum-Stabilizer-Using-PID-Controller-and-Lead-Lag-Compensator
-The inverted pendulum has a unique trait; it is unpredictable, non-linear, and consists of multiple variables. Balancing by PID controller is a continuous process where it corrects the feedback system error from the difference between the measured value and the desired value. Balancing by Lead-Lag compensator is designing a lead compensator for the process to change the shape of the root locus and choose the gain so that the poles are in the desired position and designing a lag compensator to leave the dominant closed-loop poles of the lead-compensated process in approximately the position but provide extra low-frequency gain.
+# An Inverted Pendulum Stabilizer Using PID Controller and Lead-Lag Compensator
+This project implements a controller for an inverted pendulum system using a PID controller and lead-lag compensator. The goal is to stabilize the inverted pendulum, which is a classic example of a nonlinear, unstable system, by designing a controller that can keep the pendulum upright.
 
-![](./Figures/Aspose.Words.a923060b-a05e-42fc-8d72-5b51313a9b74.001.png)
+The mechanical system was modeled using mathematical equations, and the state-space equations were obtained. The transfer function was derived from these equations, and then the controller was designed using Bode plot and Nyquist diagram in MATLAB. The root locus was used for stability analysis, and the compensator editor window in MATLAB was used to stabilize the system.
 
-**The Inverted Pendulum System**
+Finally, a PID controller was designed using the PID MATLAB tool.
 
-Shiva Shakeri
+## System Overview
+The inverted pendulum is a classic control problem where a pendulum is mounted on a cart that can move along a horizontal track. The objective is to keep the pendulum balanced in an upright position by moving the cart back and forth. This is a challenging problem because the system is inherently unstable and nonlinear.
 
-Department of ECE, University of Tehran Linear Control Systems
+In this project, we will be using a simulation of an inverted pendulum system to design and implement a controller to stabilize the pendulum.
 
-Dr. Aras Adhami
+## Installation
+To run this project, you will need to have MATLAB installed on your system. Once you have MATLAB installed, simply clone this repository to your local machine:
+``` sh
+git clone https://github.com/your_username/An-Inverted-Pendulum-Stabilizer-Using-PID-Controller-and-Lead-Lag-Compensator.git
+```
+## Usage
 
-July 2021
+The project includes MATLAB files for modeling the mechanical system, deriving the state-space equations, designing the controller using Bode plot and Nyquist diagram, and implementing the PID controller and lead-lag compensator.
+
+To use this project, simply open the MATLAB files and run the code in the MATLAB environment. You can modify the parameters of the system and the controller to experiment with different configurations and test the performance of the system.
+
+## Acknowledgments 
+We would like to express our gratitude to Prof. Aras Adhami for providing guidance and support throughout the course. We would also like to thank Farbod Mousavi for their valuable feedback and assistance during the development of this project.
+
+Additionally, we would like to acknowledge the contributions of the open-source community and the various resources available online that helped us in understanding the concepts and tools used in this project. Some of the useful weblinks are:
+
+- [Control System Toolbox documentation](https://www.mathworks.com/help/control/index.html)
+- [Control System Designer documentation](https://www.mathworks.com/help/control/control-system-designer-app.html)
+- [PID Controller Design in MATLAB](https://www.mathworks.com/help/control/ug/pid-controller-design.html)
+- [Lead-Lag Compensator Design in MATLAB](https://www.mathworks.com/help/control/ug/lead-compensator-design.html)
+- [Root Locus Design in MATLAB](https://www.mathworks.com/help/control/ug/root-locus-design.html)
+- [Inverted Pendulum Modeling and Control - University of Michigan](https://ctms.engin.umich.edu/CTMS/index.phpexample=InvertedPendulum&section=SystemModeling)
+- [PID Control of Inverted Pendulum - University of Michigan](https://ctms.engin.umich.edu/CTMS/index.php?example=InvertedPendulum&section=ControlPID)
+- [Inverted Pendulum Control - YouTube Video Tutorial](https://www.youtube.com/watch?v=qjhAAQexzLg)
 
 
-
-1. **Introduction**
-
-Balance an inverted pendulum on a moving cart that moves horizontally in one direction, is a classic problem in control systems.
-
-In this project, different methods are presented to keep the inverted pendulum in equilibrium. In this system, an inverted pendulum is connected to a chariot that moves in the direction of the horizontal axis when a force is applied. This system has two intrinsic equilibrium points that One is stable and the other is unstable. The stable equilibrium point is where the pendulum is down, which naturally goes into this state without the need for any controllers. The unstable equilibrium point is related to the position where the pendulum is placed vertically on the cart, which requires a controller to balance. The main goal of this project is to design a controller to keep the pendulum at its unstable equilibrium point.
-
-First, we model the transfer function of the system using mechanical equations and then we simulate the system with MATLAB to clarify the general situation of the problem. First, we design a PID controller for this system and the results. Then we design the lag-lead controller system using the locus root diagram and observe the results in the simulation, and finally, we design the controller using the bad diagram and the Nyquist diagram. And we simulate the results of this step.
-
-From this simulation, we can observe the intrinsic response of the system and obtain the desired results by placing a controller and changing its coefficients.
